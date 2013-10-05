@@ -1,0 +1,37 @@
+<?php 
+session_start();
+$_SESSION['number']="$num";
+?>
+<html>
+<head>
+
+<link rel="stylesheet" href="sms.css">
+
+</head>
+<body>
+  <div id="big" align = "center">
+        <img id="face" width="200" height="200" src="sms.jpg">
+        </div>
+<div id="form" align = "center">
+<form action="message.php" method="post">
+<h1>From</h1> <?php echo "$num"; ?>
+<h2>Message</h2> <textarea type="text" name ="message" id="message" style="width: 300px;height: 70px;" required></textarea>
+</br>
+</br>
+<h3>Phone Number</h3> <input type="number" name="contact" id="contact" required>
+</br>
+</br>
+<img id="captcha" src="/securimage/securimage_show.php" alt="CAPTCHA Image" /><br>
+<input type="text" name="captcha_code" size="10" maxlength="6" /><br>
+<a href="#" onclick="document.getElementById('captcha').src = '/securimage/securimage_show.php?' + Math.random(); return false">[ Different Image ]</a><br>
+<button class="submit"  name="submit"> Submit </button>
+</form>
+</div>
+
+<div align="right" color="red">
+<p>powered by</p>
+<h3>Amit & Vamsi</h3>
+</div>
+</body>
+</html>
+

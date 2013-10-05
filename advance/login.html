@@ -1,0 +1,36 @@
+<?php 
+session_start(); 
+$save = $_SESSION['contact'];
+?>
+<html>
+<head>
+
+<link rel="stylesheet" href="sms.css">
+
+</head>
+<body>
+  <div id="big" align = "center">
+        <img id="face" width="200" height="200" src="sms.jpg">
+        </div>
+<div id="form" align = "center">
+<form action="login.php" method="post">
+<h3>Contact Number</h3> <textarea type="text" name ="contact" id="contact" ></textarea>
+<h3>Password</h3> <textarea type="text" name ="pass" id="pass" ></textarea>
+</br>
+</br>
+<input type="submit" value="Ask for pin" name="save" />
+<input type="submit" value="Login" name="approve">
+</form>
+</div>
+
+<div align="right" color="red">
+<p>powered by</p>
+<h3>Amit & Vamsi</h3>
+</div>
+</body>
+</html>
+
+
+
+
+
